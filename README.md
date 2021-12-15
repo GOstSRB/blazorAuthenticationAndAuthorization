@@ -10,6 +10,9 @@ For instance, the Delete method is accessible only to users who have the Role â€
 When run the application , with SuperAdmin credentials. Navigate to /products. As excepted, the superadmin has access to all the features of the Product module
 
 You can also supply different content for display if the user isn't authorized:
+
+   ``` HTML
+<code>
 <AuthorizeView>
     <Authorized>
         <h1>Hello, @context.User.Identity.Name!</h1>
@@ -21,6 +24,9 @@ You can also supply different content for display if the user isn't authorized:
         <p>You're not signed in.</p>
     </NotAuthorized>
 </AuthorizeView>
+</code>
+   ```
+
 
 Features :
 - User List â€“ To display all the registered users
